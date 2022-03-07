@@ -1,0 +1,48 @@
+# CENFOTEC
+# PROCESOS DE INGENIERIA DE SOFTWARE
+# Fecha: 2022-03-09
+# Elaborado por:
+#   Alvaro Araya      aaraya@ucenfotec.ac.cr
+#   Hayleen Bonilla   hbonillab@ucenfotec.ac.cr
+#   Miguel Gutiérrez  mgutierrezb@ucenfotec.ac.cr
+# Versión: 1.0
+
+version: "3.2"
+
+services:
+  ## MYSQL ##
+  mysql:
+    container_name: icescrum_mysql
+    image: mysql:5.7
+    volumes:
+      - "icescrum_mysql_data:/var/lib/mysql"
+    environment:
+      - MYSQL_DATABASE=icescrum
+      - MYSQL_ROOT_PASSWORD=un1corn#supers3creTpass
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    networks:
+      - procingsw-net
+    restart: unless-stopped
+  ## ICESCRUM ##
+  icescrum:
+    container_name: icescrum
+    image: icescrum/icescrum:latest
+    volumes:
+      - ./root:/root
+    ports:
+      - "8888:8080"
+    depends_on:
+      - mysql
+    networks:
+      - procingsw-net
+    restart: unless-stopped
+
+## REDES
+networks:
+  procingsw-net:
+    driver: bridge
+
+## VOLUMENES
+volumes:
+  icescrum_mysql_data:
+    driver: local
