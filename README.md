@@ -21,7 +21,7 @@ A continuación se configurará un ambiente basado en contenedores para dejar tr
 
 La aplicación quedará corriendo como un servidor HTTP en el puerto 8888.
 
-## Instalación requisitos
+## Instalación de requisitos
 
 ### Requisitos
 
@@ -104,7 +104,7 @@ Es recomendable instalar el Visual Studio Code y las extensiones de Docker:
     4. Chequear la opción de saltar el **Free Trial**.
     5. En los parámetros de la base de datos establecer el tipo de BD como **MySQL**, el nombre del servidor debe ser **icescrum_mysql** (en vez de localhost), nombre de usuario **root** y la clave especificada en el docker-compose.yml.
     6. Revisar los parámetros finales de configuración y enviar la configuración.
-    7. Reiniciar los contenedores.
+    7. Reiniciar los contenedores (docker-compose down o CTRL+C).
 
 ### Recursos
 
