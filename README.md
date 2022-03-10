@@ -108,6 +108,8 @@ Es recomendable instalar el Visual Studio Code y las extensiones de Docker:
 
 ### Recursos
 
+[What is a Linux Container](https://www.redhat.com/en/topics/containers/whats-a-linux-container)
+
 [Install Docker](https://www.docker.com/products/docker-desktop)
 
 [DockerHub repository](https://hub.docker.com)
@@ -119,3 +121,10 @@ Es recomendable instalar el Visual Studio Code y las extensiones de Docker:
 [Docker Compose reference](https://docs.docker.com/compose/compose-file/)
 
 [iceScrum](https://www.icescrum.com/)
+
+[Cloud Native Computing Fundation](https://www.cncf.io/)
+
+[containerd](https://containerd.io/)
+
+[Open Container Initiative](https://opencontainers.org/)
+
